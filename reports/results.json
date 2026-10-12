@@ -1,0 +1,97 @@
+{
+  "retrieved": 150,
+  "unavailable": 10,
+  "reviewed": 65,
+  "writing_candidates_unannotated": 26,
+  "context_noted": 39,
+  "unreviewed": 85,
+  "distinct_authors": 128,
+  "possible_truncation": 68,
+  "writing_median_views": 552917.0,
+  "noted_median_views": 431053.0,
+  "writing_relative_sample_n": 5,
+  "top_within_author": [
+    {
+      "post_url": "https://x.com/i/status/2040470801506541998",
+      "relative_views": "2.8",
+      "views": "7328278"
+    },
+    {
+      "post_url": "https://x.com/i/status/1827143768459637073",
+      "relative_views": "0.87",
+      "views": "2831988"
+    },
+    {
+      "post_url": "https://x.com/i/status/1937902205765607626",
+      "relative_views": "0.692",
+      "views": "2402042"
+    },
+    {
+      "post_url": "https://x.com/i/status/1976077806443569355",
+      "relative_views": "0.207",
+      "views": "716543"
+    },
+    {
+      "post_url": "https://x.com/i/status/1976082963382272334",
+      "relative_views": "0.114",
+      "views": "397000"
+    }
+  ],
+  "model": {
+    "target": "log1p((likes+reposts+replies+quotes)*1000/views)",
+    "n_eligible": 135,
+    "n_authors": 114,
+    "feature_names": [
+      "characters",
+      "words",
+      "question",
+      "exclamation",
+      "newline",
+      "link",
+      "hashtag",
+      "first_person",
+      "ai_topic",
+      "launch_topic"
+    ],
+    "splits": [
+      {
+        "split": 1,
+        "train_posts": 99,
+        "test_posts": 36,
+        "baseline_mae": 0.5311,
+        "ridge_mae": 0.5483
+      },
+      {
+        "split": 2,
+        "train_posts": 99,
+        "test_posts": 36,
+        "baseline_mae": 0.5732,
+        "ridge_mae": 0.5283
+      },
+      {
+        "split": 3,
+        "train_posts": 102,
+        "test_posts": 33,
+        "baseline_mae": 0.6241,
+        "ridge_mae": 0.6669
+      },
+      {
+        "split": 4,
+        "train_posts": 103,
+        "test_posts": 32,
+        "baseline_mae": 0.5317,
+        "ridge_mae": 0.5318
+      },
+      {
+        "split": 5,
+        "train_posts": 103,
+        "test_posts": 32,
+        "baseline_mae": 0.5798,
+        "ridge_mae": 0.5298
+      }
+    ],
+    "mean_baseline_mae": 0.568,
+    "mean_ridge_mae": 0.561,
+    "improvement_pct": 1.2
+  }
+}
